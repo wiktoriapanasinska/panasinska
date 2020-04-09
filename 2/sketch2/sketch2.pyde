@@ -1,6 +1,6 @@
 def setup():
     size(600, 600)
-    frameRate(30)
+    frameRate(10) #  teraz lepiej widać zmianę kolorów
     global slownik_kolorow
     background(230,214,144)
     
@@ -16,18 +16,13 @@ def setup():
 def draw():
     global iteracja
     iteracja -=1
+    rect(iteracja/2,iteracja,30,30) # to nie jest najlepsza zmienna do użycia w tym miejscu, należałoby raczej wykorzystać wysokość i szerokość okna
 
-    
-
-    rect(iteracja/2,iteracja,30,30)
-
-
-
-    stroke(222,076,138, 80)
+    # stroke(222,076,138, 80) # zbędne, skoro zaraz nadpisujesz
     stroke(*slownik_kolorow["różowy"])
     strokeWeight(5)
     fill(*lista_kolorow[iteracja%len(lista_kolorow)])
-    
+    '''
     print(lista_kolorow)
     print(len(lista_kolorow))
     print(iteracja)
@@ -35,8 +30,8 @@ def draw():
     print(lista_kolorow[0])
     print(lista_kolorow[1])
     print(lista_kolorow[2])
-    
+    '''
 
-    
     if mousePressed:
         exit()
+#1,5p
