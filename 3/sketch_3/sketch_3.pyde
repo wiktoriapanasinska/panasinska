@@ -11,12 +11,9 @@ def setup():
     global iteracja
     iteracja =570
 
-def draw():                         
-    global iteracja_programu
-    iteracja_programu +=1 
-    
-    
-def draw():
+def draw():     # ta funkja nie wpowinna występować dwukrotnie w jednym programie                    
+    global iteracja
+    iteracja +=1 
     clear()
     background(230,215,144)
     text("W", 140, 200)
@@ -24,7 +21,7 @@ def draw():
     fill(255,255,000)
     text("P",200,200)
     
-    if keyPressed:
+    if keyPressed: # trzebaby doprecyzować kolejnym warunkiem jaki klawisz
         text("P",200,200)
         print(hex(get(mouseX, mouseY)))
         fill(*lista_kolorow[iteracja%len(lista_kolorow)])
@@ -43,13 +40,12 @@ def draw():
     s.vertex(210,height/2-80)
     s.vertex(100,height/2-100)
 
-    
-    
     s.endShape(CLOSE)
     shape(s, 25, 25) 
     
 
-
-def mouseMoved():
+def mouseMoved(): # miało być na najechaniemyszy, nie na ruszenienią w ogóle
         print(hex(get(150,200))) 
         fill(222,076,138)
+
+# 0,75p
