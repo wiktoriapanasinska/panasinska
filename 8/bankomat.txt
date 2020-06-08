@@ -1,0 +1,22 @@
+Klasa - Class Bankomat()
+	atrybut_klasy - stan_pieniedzy = stanp()
+	atrybut - self.stan_pieniedzy = stan_pieniedzy_w_bankomacie
+	metoda - def wplata gotowki
+	metoda - def wyplata gotowki
+	metoda - def sprawdz_historie_transakcji
+	metoda - def wybierz_jezyk
+	metoda - def anuluj
+	metoda - def sprawdz_stan_konta
+	metoda - def wyciagnij_karte
+	metoda - def zmiana_PINu
+	metoda - def wydrukuj_paragon
+	metoda - def doladuj_telefon_komorkowy
+
+
+Klasa - Class Klient()
+	atrybut_klasy - stan_konta = stank()
+	atrybut - self.stan_konta = stan_konta
+	metoda - def wloz_karte
+	metoda - def wprowadz_PIN
+	metoda - def wplata_pieniedzy
+	metoda - def wyplata_pieniedzy
