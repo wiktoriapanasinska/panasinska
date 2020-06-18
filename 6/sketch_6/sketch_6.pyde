@@ -17,17 +17,9 @@ class PasiastyKwadrat(Kwadrat):
             
 class KolorowyPasiastyKwadrat(PasiastyKwadrat):
     def sketchKolorowyPasiasty(self,x, y, paski):
-        fill(255, 255, 0,200)
-        Kwadrat.sketch(self,x,y)
-        space = self.bok/paski
-        _xLinii_ = 0 
-        for pasek in range(0, paski): 
-            line(x+_xLinii_, y, x+_xLinii_, y+self.bok)
-            _xLinii_ +=space
-            colorMode(HSB, 360, 100, 100)
-            for i in range(200): 
-                for j in range(100):
-                    stroke(i, j, 100)
+        fill(255, 25, 0)
+        PasiastyKwadrat.sketchPasiasty(self,x,y, paski)
+        # część z pętlą po natężeniu koloru miasiałaby być bardziej skokowa i nie przechodzić na każdym pasku do końca dając kolor i tak maksymalny, w tej formie w ogóle nie spełniała roli
             
 def setup():
     size(500, 500)
@@ -44,8 +36,7 @@ def setup():
     malyKolorowyPasiastyKwadrat = KolorowyPasiastyKwadrat (35.0)
     malyKolorowyPasiastyKwadrat.sketchKolorowyPasiasty(400,200,10)
     
-    # Przepraszam,że wysyłam tak późno, ale czekałam wczoraj na lot astronautów na ISS i nie zauważyłam, że się nie dodało :(
-    # P.S. i tak przełożyli lot niestety
+# 1,5 pkt
 
 
 
