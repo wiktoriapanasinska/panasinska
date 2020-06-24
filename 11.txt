@@ -1,0 +1,12 @@
+Kawiarnia
+
+Barista:Dzień dobry, co podać?
+Klient:Poproszę latte
+Barista:Czy chce Pan(i) latte z mlekiem roślinnym? Mamy do wyboru mleko sojowe,migdałowe i owsiane.
+Klient: Poproszę latte z mlekiem sojowym.
+Barista:Mogę zaproponować jeszcze syropy: karmelowy lub czekoladowy.
+Klient:Poproszę latte z mlekiem sojowym i syropem karmelowym. 
+
+Wzorzec:Dekorator
+Dlaczego:Dodaje dodatkową funkcjonalność (syrop, rodzaj mleka) do już istniejącej, podstawowej, którą można wybrać ( zwykłe latte) bez dodatków. Rodzaj mleka i dodatek w formie syropu pełni funkcję dorabiającą.
+
