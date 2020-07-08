@@ -60,22 +60,24 @@ def mouseClicked():
             library.addBook(Madzia.returnBook())
             
 class Testowanie(unittest.TestCase):
-    def test_klient_wypozycza_i_oddaje_ksiazke(self):
+    def test_klient_wypozycza_i_oddaje_ksiazke(self): # unit testy z zalożenia powinny testować najmniejszą jednostkę logiczną kodu
         klient = Customer()
         self.assertFalse(klient.haveBook)
-        self.assertEqual(klient.book, "")
-        klient.requestBook("Wiedzmin")
+        self.assertEqual(klient.book, "") # do tąd to powinien być test tworzenia klienta
+        klient.requestBook("Wiedzmin") # od tąd to powinien być oddzielny test wypożyczania
         self.assertTrue(klient.haveBook)
         self.assertEqual(klient.book, "Wiedzmin")
-        klient.returnBook()
+        klient.returnBook() # a od tąd to mógłby być trzeci test - zwrócenia książki
         self.assertFalse(klient.haveBook)
         
     def test_zwrocenie_ksiazki_do_biblioteki(self):
         biblioteka = Library(["Zbrodnia i kara", "Buszujacy w zbozu"])
         self.assertEqual(biblioteka.availableBooks, ["Zbrodnia i kara", "Buszujacy w zbozu"])
-        biblioteka.addBook("Folwark zwierzecy")
+        biblioteka.addBook("Folwark zwierzecy") # ponownie - to już kolejny test, powyżej tworzenia biblioteki, poinżej dodawnaia (oddawania) książek
         self.assertEqual(biblioteka.availableBooks, ["Zbrodnia i kara", "Buszujacy w zbozu", "Folwark zwierzecy"])
         
 if __name__ == '__main__':
     unittest.main()
+    
+# 2 pkt
             
