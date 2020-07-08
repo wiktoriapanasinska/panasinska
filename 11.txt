@@ -10,3 +10,5 @@ Klient:Poproszę latte z mlekiem sojowym i syropem karmelowym.
 Wzorzec:Dekorator
 Dlaczego:Dodaje dodatkową funkcjonalność (syrop, rodzaj mleka) do już istniejącej, podstawowej, którą można wybrać ( zwykłe latte) bez dodatków. Rodzaj mleka i dodatek w formie syropu pełni funkcję dorabiającą.
 
+Dobry przykład. 2pkt
+
